@@ -17,6 +17,7 @@ function setup() {
     capture.hide(); // 隱藏原始影像，僅顯示繪製的影像
   } catch (e) {
     cameraError = true; // 捕捉例外錯誤
+    console.error("攝影機啟用失敗：", e);
   }
 
   // 建立與視訊畫面相同大小的圖形
