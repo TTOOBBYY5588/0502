@@ -12,7 +12,10 @@ function draw() {
   background('#e7c6ff'); // 確保背景顏色持續為紫色
   let x = (windowWidth - capture.width) / 2; // 計算影像的水平中心位置
   let y = (windowHeight - capture.height) / 2; // 計算影像的垂直中心位置
-  image(capture, x, y); // 將影像繪製在畫布中央
+
+  translate(width, 0); // 將畫布的原點移到右上角
+  scale(-1, 1); // 水平翻轉畫布
+  image(capture, -x - capture.width, y); // 繪製翻轉後的影像
 }
 
 function windowResized() {
