@@ -37,7 +37,7 @@ function draw() {
   }
 
   let x = (width - capture.width) / 2; // 計算影像的水平中心位置
-  let y = (height - capture.height) / 2; // 計算影像的垂直中心位置
+  let y = height - capture.height; // 計算影像的垂直位置，放置在視窗最下方
 
   // 更新 graphics 的內容
   graphics.background(0); // 設定背景顏色為黑色
@@ -57,8 +57,8 @@ function draw() {
   image(capture, -x - capture.width, y); // 繪製翻轉後的影像
   pop(); // 恢復繪圖狀態
 
-  // 繪製圖形在視訊畫面正中央
-  image(graphics, x, y); // 將圖形繪製在視訊畫面正中央
+  // 繪製圖形在視訊畫面正上方
+  image(graphics, x, y - graphics.height - 10); // 在視訊畫面上方繪製圖形，間隔 10px
 }
 
 function windowResized() {
