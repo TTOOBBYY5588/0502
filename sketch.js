@@ -37,7 +37,7 @@ function draw() {
   }
 
   let x = (width - capture.width) / 2; // 計算影像的水平中心位置
-  let y = (height - capture.height) / 2 + 50; // 計算影像的垂直中心位置，並向下移動 50px
+  let y = (height - capture.height) / 2; // 計算影像的垂直中心位置
 
   // 更新 graphics 的內容
   graphics.background(0); // 設定背景顏色為黑色
