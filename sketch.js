@@ -12,7 +12,7 @@ function setup() {
       if (!stream.active) {
         cameraError = true; // 如果攝影機無法啟用，設定錯誤標誌
       }
-    });
+    });s
     capture.size(windowWidth * 0.8, windowHeight * 0.8); // 設定影像大小為視窗的 80%
     capture.hide(); // 隱藏原始影像，僅顯示繪製的影像
   } catch (e) {
