@@ -57,7 +57,7 @@ function draw() {
   image(capture, -x - capture.width, y); // 繪製翻轉後的影像
   pop(); // 恢復繪圖狀態
 
-  // 繪製圖形在視訊畫面上方
+  // 繪製圖形在視訊畫面上方（不翻轉 graphics）
   image(graphics, x, y - graphics.height - 10); // 在視訊畫面上方繪製圖形，間隔 10px
 }
 
