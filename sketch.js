@@ -12,7 +12,7 @@ function setup() {
       if (!stream.active) {
         cameraError = true; // 如果攝影機無法啟用，設定錯誤標誌
       }
-    });s
+    });
     capture.size(windowWidth * 0.8, windowHeight * 0.8); // 設定影像大小為視窗的 80%
     capture.hide(); // 隱藏原始影像，僅顯示繪製的影像
   } catch (e) {
@@ -52,9 +52,9 @@ function draw() {
 
   // 繪製視訊畫面
   push(); // 儲存當前繪圖狀態
-  translate(width / 2, 0); // 將畫布的原點移到畫布的右半部分
+  translate(width, 0); // 將畫布的原點移到右上角
   scale(-1, 1); // 水平翻轉畫布
-  image(capture, -capture.width / 2, y); // 繪製翻轉後的影像
+  image(capture, -x - capture.width, y); // 繪製翻轉後的影像
   pop(); // 恢復繪圖狀態
 
   // 繪製圖形在視訊畫面上方
